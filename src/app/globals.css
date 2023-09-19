@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.container {
+  @apply max-w-720p m-auto w-11/12;
+}

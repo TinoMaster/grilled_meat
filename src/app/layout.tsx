@@ -1,9 +1,13 @@
 import { Nabvar } from "@/components/app/Nabvar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Dancing_Script } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--body-font" });
+const dancing_script = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--display-font",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-slate-100">
-      <body className={inter.className}>
+    <html lang="en" className="bg-slate-100 font-body">
+      <body className={`${inter.variable} ${dancing_script.variable}`}>
         <Nabvar />
         {children}
       </body>
