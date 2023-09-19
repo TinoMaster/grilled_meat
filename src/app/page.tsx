@@ -1,16 +1,20 @@
-import Image from "next/image";
 import { img_parrilla } from "@/utils/images";
+import { Banner_Image } from "@/components/Banner_Image";
+
+const description2 = "Probando esta talla";
+const description1 = "Feels Like Home, Tastes Like a Paaradise";
 
 export default function Home() {
   return (
     <>
       <header>
-        <section className="w-full h-[80vh] relative">
-          <div className="absolute w-full h-full bg-gradient-to-t from-black/40 to-black/60"></div>
-          <Image className="w-full h-full object-cover" src={img_parrilla} alt="prueba" />
-        </section>
+        <Banner_Image
+          image={img_parrilla}
+          tittle={description2}
+          bigTittle={description1}
+        />
       </header>
-      <main></main>
+      <main className="rounded-tr-[50px] z-10 -translate-y-9 bg-white w-full h-[1000px]"></main>
     </>
   );
 }

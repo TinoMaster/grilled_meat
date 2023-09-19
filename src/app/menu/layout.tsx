@@ -1,4 +1,5 @@
-import { ImageMenu } from "@/components/menu/ImageMenu";
+import { Banner_Image } from "@/components/Banner_Image";
+import { img_Menu } from "@/utils/images";
 import React from "react";
 
 export default function LayoutMenu({
@@ -7,10 +8,11 @@ export default function LayoutMenu({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      {/* Imagen */}
-      <ImageMenu />
+    <>
+      <header>
+        <Banner_Image image={img_Menu} />
+      </header>
       {children}
-    </div>
+    </>
   );
 }
